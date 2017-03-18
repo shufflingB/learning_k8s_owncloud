@@ -1,8 +1,9 @@
-## Requirements
+## Requirements
+
 1. A Unix(y) OS (tested on macOS) for helper bash scripts.
 2. Instance of minikube with enough resources.
 
-## How to run
+## How to run
 In directory with README and yaml files.
 
 1. `bash ./create_hostpath_dirs.bash`
