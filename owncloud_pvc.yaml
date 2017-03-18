@@ -1,0 +1,61 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata: 
+  name: owncloud-config-claim
+  labels:
+    app: owncloud
+  annotations: 
+    volume.beta.kubernetes.io/storage-class: ""
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata: 
+  name: owncloud-data-claim
+  labels:
+    app: owncloud
+  annotations: 
+    volume.beta.kubernetes.io/storage-class: ""
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata: 
+  name: owncloud-apps-claim
+  labels:
+    app: owncloud
+  annotations: 
+    volume.beta.kubernetes.io/storage-class: ""
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mariadb-owncloud-claim
+  labels:
+    app: owncloud
+  annotations: 
+    volume.beta.kubernetes.io/storage-class: ""
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
