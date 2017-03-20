@@ -6,7 +6,7 @@
 ## How to run
 In directory with README and yaml files.
 
-1. `bash .helpers/create_hostpath_dirs.bash`
+1. `bash ./helpers/create_hostpath_dirs.bash`
 1. `kubectl create -f .`
 
 
