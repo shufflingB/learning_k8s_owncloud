@@ -4,7 +4,6 @@
 
 set -x
 
-PV_YAML_FILE="./owncloud_pv.yaml"
 APP_LABEL='owncloud'
 
 
