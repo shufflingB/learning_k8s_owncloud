@@ -7,7 +7,16 @@
 In directory with README and yaml files.
 
 1. `bash ./helpers/create_hostpath_dirs.bash`
+1. Follow instruction in owncloud_secrets.yaml to add new passwords.
 1. `kubectl create -f .`
+1. ... wait ... for it to come up
+
+## Viewing results
+
+`minikube service owncloud` should open default browser.
+
+Log in as user 'admin' with password as set in step 2 above. 
+
 
 
 ## Helper scripts
