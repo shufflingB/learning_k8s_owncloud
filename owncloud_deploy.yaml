@@ -8,12 +8,8 @@ spec:
   replicas: 1 
   template:
     metadata:
-      # unlike a "name" is not included, instead it is automatically
-      # generated based upon the deployment name.
       labels:
         app: owncloud
-        # track: stable
-      # annotations:
     spec:
       volumes:
       - name: config-store
