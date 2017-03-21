@@ -10,10 +10,11 @@ data:
   owc_db_name: owncloud
   owc_db_root_user: root
   owc_admin_user: admin
-  # NB: This is the ip address of the domain that you are allowed to access the web interface from.
-  # ownClound blocks access from domains that it does not know about. This address gets added to
-  # ownCloud's trusted_domain configuration array.
+  # NB: This is the ip address, or name, of a domain that ownCloud will allow
+  # users to log in to the web interface from. Once the application is
+  # running additional domains can be added either via the web interface or 
+  # 'php occ' tool
   # https://doc.owncloud.org/server/latest/admin_manual/search.html?q=trusted_domain
   # When using minikube with NodePort this wants to be the output from the
   # command "minikube ip"
-  owc_trusted_ip: 192.168.64.7
+  owc_trusted_ip: 192.168.64.2
