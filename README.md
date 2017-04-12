@@ -15,7 +15,7 @@ In directory with README and yaml files.
 
 `minikube service owncloud` should open default browser.
 
-Log in as user 'admin' with password as set in step 2 above. 
+Log in as username 'admin' with password as set in step 2 above.
 
 
 
@@ -27,3 +27,7 @@ Other **rudimentary** scripts to be **used with caution**, that may be helpful i
 - `bash ./helpers/reset_k8s.bash` - removes just the Kubernetes stuff from the system.
 - `bash ./helpers/zap_EVERYTHING.bash` - **blows EVERYTHING away** including any disk
   volumes that may have been created in minikube with `./create_hostpath_dirs.bash`
+
+## More info
+
+https://taskudo.info/blog/
