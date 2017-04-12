@@ -1,4 +1,4 @@
-## Requirements
+## Overview
 
 This is a set of configurations for spinning up a small instance of the [ownCloud](https://owncloud.org/) application on a Kubernetes cluster running on:
 
