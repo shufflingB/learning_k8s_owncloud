@@ -15,6 +15,6 @@ data:
   # running additional domains can be added either via the web interface or 
   # 'php occ' tool
   # https://doc.owncloud.org/server/latest/admin_manual/search.html?q=trusted_domain
-  # When using minikube with NodePort this wants to be the output from the
-  # command "minikube ip"
-  owc_trusted_ip: 192.168.64.2
+  # On GKE this should be the IP address that you reserved,
+  # e.g. with 'gcloud compute addresses create --region='your_region'  owncloud
+  owc_trusted_ip: your.reserved.ip.here

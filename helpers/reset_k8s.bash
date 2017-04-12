@@ -2,6 +2,7 @@
 #
 # To invoke 'bash ./reset_k8s.bash'
 
+
 set -x
 
 APP_LABEL='owncloud'

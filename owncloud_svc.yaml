@@ -11,4 +11,5 @@ spec:
     - protocol: "TCP"
       port: 80
       targetPort: 80
-  type: NodePort
+  type: LoadBalancer
+  loadBalancerIP: your.reserved.ip.here

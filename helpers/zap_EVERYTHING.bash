@@ -16,10 +16,8 @@ k8s_objs='deployment,service,secrets,configmap,persistentvolumeclaim,persistentv
 kubectl delete $k8s_objs --selector app=$APP_LABEL
 
 # Remove any volumes that have been created
-hostPath_paths=$(sed -n  "s/ *path: *\"\(.*\)\"/\1/p" $PV_YAML_FILE)
+hostPath_paths=$(sed -n  "s/ *pdName: *\(.*\)/\1/p" $PV_YAML_FILE)
 for path in ${hostPath_paths[@]}
 do
-  minikube ssh -- sudo rm -r $path
+  gcloud compute disks delete path
 done
-
-

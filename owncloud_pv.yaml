@@ -9,9 +9,10 @@ spec:
     storage: 1Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: "/data/owncloud/config"
+  gcePersistentDisk:
+    # The name here must match what was created with gcloud compute disks create ...
+    pdName: owncloud-config-disk
+    fsType: ext4
 ---
 kind: PersistentVolume
 apiVersion: v1
@@ -24,9 +25,9 @@ spec:
     storage: 5Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: "/data/owncloud/data"
+  gcePersistentDisk:
+    pdName: owncloud-data-disk
+    fsType: ext4
 ---
 kind: PersistentVolume
 apiVersion: v1
@@ -39,9 +40,9 @@ spec:
     storage: 2Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: "/data/owncloud/apps"
+  gcePersistentDisk:
+    pdName: owncloud-apps-disk
+    fsType: ext4
 ---
 kind: PersistentVolume
 apiVersion: v1
@@ -54,6 +55,6 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: "/data/owncloud/mariadb"
+  gcePersistentDisk:
+    pdName: mariadb-owncloud-disk
+    fsType: ext4
